@@ -6,26 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/main.css">
-    <title>Cursor</title>
+    <title>bg-line</title>
 </head>
+
 <body>
     <div class="container">
         <div id="box">
             <div class="block">
-                <img id="pointer" class="box-pointer box-pointer-hidden box-pointer-show" src="img/read.svg">
+                <img id="pointer" class="box-pointer box-pointer-hidden box-pointer-show" src="img/play.svg">
             </div>
             <div class="box-video">
-                <video class="video" loop muted>
+                <video class="video" loop muted autoplay>
                     <source src="/vid.mp4" type="video/mp4" />
                 </video>
             </div>
         </div>
+        <ul class="line" id="line">
+            <li class="line_item"></li>
+            <li class="line_item"></li>
+            <li class="line_item"></li>
+            <li class="line_item"></li>
+            <li class="line_item"></li>
+            <li class="line_item"></li>
+            <li class="line_item"></li>
+            <li class="line_item"></li>
+            <li class="line_item"></li>
+            <li class="line_item"></li>
+        </ul>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
     <script src="js/app.js"></script>
-    <script src="js/cursor.js"></script>
+    <script>
+        setTimeout(function () {
+            var element = document.getElementById('line');
+            element.classList.add('hidden');
+        }, 3500); // Скрыть через 3 секунды
+    </script>
 
 </body>
 
